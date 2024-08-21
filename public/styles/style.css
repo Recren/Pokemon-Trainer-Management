@@ -17,6 +17,12 @@ body{
     width: 300px;
     border: solid 2px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     justify-self: center;
+    transition: .25s;
+}
+
+.trainer-card:hover{
+    transform: scale(1.1);
 }
