@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    </link>
+</head>
+
+<body>
+    <h1>Select a Region:</h1>
+    <div class="region-card-container">
+
+        <% regions.forEach(region=>{%>
+            <a href="/regions/<%=region.region_name%>">
+                <div class="region-card">
+                    <h3>
+                        <%=region.region_name%>
+                    </h3>
+                </div>
+            </a>
+            <%})%>
+
+    </div>
+
+</body>
+
+</html>
