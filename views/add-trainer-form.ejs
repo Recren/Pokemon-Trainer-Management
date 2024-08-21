@@ -20,9 +20,15 @@
             </div>
             <div>
                 <label style="font-size: 30px;" for="region_name">Home Region</label>
-                <input style="height: 30px; width: 400px;" id="region_name" name="region_name" type="text">
+                <select style="height: 30px; width: 400px;" id="region_name" name="region_name">
+                    <%regions.forEach(region=>{%>
+                        <option value="<%=region.region_name%>">
+                            <%=region.region_name%>
+                        </option>
+                        <%})%>
+                </select>
             </div>
-            <button type="submit">Submit Form</button>
+            <button type="submit>">Submit Form</button>
         </div>
     </form>
 </body>

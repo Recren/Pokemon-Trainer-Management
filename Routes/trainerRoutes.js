@@ -3,9 +3,17 @@ const db = require("../db/queries")
 
 const trainerRouter = Router()
 
+
+//View all trainers
+trainerRouter.get("/", async (req,res) =>{
+    const trainers = await db.getAllTrainers()
+    res.render("view-all-trainers", {trainers:trainers})
+})
+
 //To add a trainer
-trainerRouter.get("/addTrainer", (req, res) =>{
-    res.render("add-trainer-form");
+trainerRouter.get("/addTrainer", async (req, res) =>{
+    const regions = await db.getAllRegions();
+    res.render("add-trainer-form", {regions:regions});
 })
 trainerRouter.post("/addTrainer", async (req, res)=>{
     await db.postNewTrainer(req.body.name, req.body.region_name)
