@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require("path");
 const regionRouter = require("./Routes/regionRoutes")
+const trainerRouter = require("./Routes/trainerRoutes")
 const app = express();
 
 //Allow app to use static assets
@@ -14,6 +15,7 @@ app.set("views", path.join(__dirname, "views"));
 
 //Tell app to use the routes 
 app.use('/regions', regionRouter)
+app.use('/trainers', trainerRouter)
 
 const PORT = 5000;
 

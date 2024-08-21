@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    </link>
+</head>
+
+<body>
+    <h1>Trainer Profile: <%=trainerInfo.name%>
+    </h1>
+    <h2>Hometown : <%=trainerInfo.region%>
+    </h2>
+    <% trainerTeams.forEach(team=>{ %>
+        <div class="team-card-container">
+            <h3>
+                <%=team.team_name%>
+            </h3>
+            <div class="team-pokemon-container">
+                <%if(team.pokemon_one !=null){%>
+                    <p>
+                        <%=team.pokemon_one%>
+                    </p>
+                    <% } %>
+                        <%if(team.pokemon_two !=null){%>
+                            <p>
+                                <%=team.pokemon_two%>
+                            </p>
+                            <% } %>
+                                <%if(team.pokemon_three !=null){%>
+                                    <p>
+                                        <%=team.pokemon_three%>
+                                    </p>
+                                    <% } %>
+                                        <%if(team.pokemon_four !=null){%>
+                                            <p>
+                                                <%=team.pokemon_four%>
+                                            </p>
+                                            <% } %>
+                                                <%if(team.pokemon_five !=null){%>
+                                                    <p>
+                                                        <%=team.pokemon_five%>
+                                                    </p>
+                                                    <% } %>
+                                                        <%if(team.pokemon_six !=null){%>
+                                                            <p>
+                                                                <%=team.pokemon_six%>
+                                                            </p>
+                                                            <% } %>
+            </div>
+
+        </div>
+        <% }) %>
+
+</body>
+
+</html>

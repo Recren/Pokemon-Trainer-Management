@@ -11,13 +11,15 @@
 
 <body>
     <h1>All Trainers in the region:</h1>
-    <div class="region-card-container">
+    <div class="trainer-card-container">
         <% trainers.forEach(trainer=>{%>
-            <div class="region-card">
-                <h3>
-                    <%=trainer.name%>
-                </h3>
-            </div>
+            <a href="../../trainers/<%=trainer.trainer_id%>">
+                <div class="trainer-card">
+                    <h3>
+                        <%=trainer.name%>
+                    </h3>
+                </div>
+            </a>
             <%})%>
 
     </div>

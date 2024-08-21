@@ -4,7 +4,9 @@ body{
     flex-direction: column;
 
 }
-
+a{
+    text-decoration: none;
+}
 .btn {
 
     padding: 10px 20px;
@@ -22,14 +24,14 @@ body{
     background-color: #0056b3;
   }
 
-.region-card-container{
+.region-card-container, .trainer-card-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Three equal-width columns */
     gap: 20px; /* Space between grid items */
     width: 60vw;
 }
 
-.region-card{
+.region-card, .trainer-card{
     height: 200px;
     width: 200px;
     border: solid 2px;
@@ -41,6 +43,22 @@ body{
     transition: .25s;
 }
 
-.region-card:hover{
+.region-card:hover, .trainer-card:hover{
     transform: scale(1.1);
+}
+
+.team-card-container{
+    font-size: 30px;
+    width: 70vw;
+    height: 15vh;
+    border: solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.team-pokemon-container{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }

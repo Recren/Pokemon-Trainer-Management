@@ -15,8 +15,18 @@ async function getAllTrainers() {
     return rows
 }
 
+async function getTrainerInfo(trainer_id){
+    const { rows } = await pool.query("SELECT * FROM trainers where trainer_id = ($1)", [trainer_id]);
+    return rows[0]  
+}
+async function getTrainerTeams(trainer_id){
+    const { rows } = await pool.query("SELECT * FROM trainer_has where trainer_id = ($1)", [trainer_id]);
+    return rows
+}
 module.exports = {
     getAllRegions,
     getTrainersFromRegion,
-    getAllTrainers
+    getAllTrainers,
+    getTrainerInfo,
+    getTrainerTeams
 };
