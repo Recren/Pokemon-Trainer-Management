@@ -12,10 +12,17 @@
 <body>
     <h1>Add trainer</h1>
 
-    <form>
-        <div style="display: flex; flex-direction: column; align-items: center;">
-            <label style="font-size: 30px;" for="name">Name</label>
-            <input style="height: 30px; width: 400px;" id="name" name="name" type="text">
+    <form method="POST" action="/trainers/addTrainer">
+        <div style="display: flex; flex-direction: column; align-items: center; gap:30px">
+            <div>
+                <label style="font-size: 30px;" for="name">Name</label>
+                <input style="height: 30px; width: 400px;" id="name" name="name" type="text">
+            </div>
+            <div>
+                <label style="font-size: 30px;" for="region_name">Home Region</label>
+                <input style="height: 30px; width: 400px;" id="region_name" name="region_name" type="text">
+            </div>
+            <button type="submit">Submit Form</button>
         </div>
     </form>
 </body>

@@ -1,12 +1,13 @@
 const express = require("express");
 const path = require("path");
 const regionRouter = require("./Routes/regionRoutes")
-const trainerRouter = require("./Routes/trainerRoutes")
+const trainerRouter = require("./Routes/trainerRoutes");
+const bodyParser = require("body-parser");
 const app = express();
 
 //Allow app to use static assets
 app.use(express.static(path.join(__dirname, "public")))
-
+app.use(bodyParser.urlencoded({extended: true}))
 
 //Setup express to get renders from the views directory
 app.set("view engine", "ejs");
