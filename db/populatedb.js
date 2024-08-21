@@ -64,22 +64,104 @@ CREATE TABLE IF NOT EXISTS trainer_has(
 INSERT INTO regions (Region_Name)
 VALUES
     ('Kanto'),
+    ('Johto'),
+    ('Hoenn'),
+    ('Sinnoh'),
+    ('Unova'),
     ('Kalos');
 
 INSERT INTO pokemon (Name, Dex_num, Region, Primary_type, Secondary_type) 
 VALUES
-  ('Venasaur', '3', 'Kanto', 'Grass', 'Poison'),
-  ('Charizard', '6', 'Kanto', 'Fire', 'Flying'),
-  ('Blastoise', '9', 'Kanto', 'Water', NULL),
-  ('Pikachu', '25', 'Kanto', 'Electric', NULL);
+    ('Venusaur', '3', 'Kanto', 'Grass', 'Poison'),
+    ('Charizard', '6', 'Kanto', 'Fire', 'Flying'),
+    ('Blastoise', '9', 'Kanto', 'Water', NULL),
+    ('Butterfree', '12', 'Kanto', 'Bug', 'Flying'),
+    ('Beedrill', '15', 'Kanto', 'Bug', 'Poison'),
+    ('Pidgeot', '18', 'Kanto', 'Normal', 'Flying'),
+    ('Raticate', '20', 'Kanto', 'Normal', NULL),
+    ('Fearow', '22', 'Kanto', 'Normal', 'Flying'),
+    ('Arbok', '24', 'Kanto', 'Poison', NULL),
+    ('Pikachu', '25', 'Kanto', 'Electric', NULL),
+    ('Raichu', '26', 'Kanto', 'Electric', NULL),
+    ('Meganium', '154', 'Johto', 'Grass', NULL),
+    ('Typhlosion', '157', 'Johto', 'Fire', NULL),
+    ('Feraligatr', '160', 'Johto', 'Water', NULL),
+    ('Noctowl', '164', 'Johto', 'Normal', 'Flying'),
+    ('Ariados', '168', 'Johto', 'Bug', 'Poison'),
+    ('Togetic', '176', 'Johto', 'Fairy', 'Flying'),
+    ('Sceptile', '254', 'Hoenn', 'Grass', NULL),
+    ('Blaziken', '257', 'Hoenn', 'Fire', 'Fighting'),
+    ('Swampert', '260', 'Hoenn', 'Water', 'Ground'),
+    ('Mightyena', '262', 'Hoenn', 'Dark', NULL),
+    ('Shiftry', '275', 'Hoenn', 'Grass', 'Dark'),
+    ('Gardevoir', '282', 'Hoenn', 'Psychic', 'Fairy'),
+    ('Breloom', '286', 'Hoenn', 'Grass', 'Fighting'),
+    ('Slaking', '289', 'Hoenn', 'Normal', NULL),
+    ('Aggron', '306', 'Hoenn', 'Steel', 'Rock'),
+    ('Manectric', '311', 'Hoenn', 'Electric', NULL),
+    ('Sharpedo', '319', 'Hoenn', 'Water', 'Dark'),
+    ('Torterra', '389', 'Sinnoh', 'Grass', 'Ground'),
+    ('Infernape', '392', 'Sinnoh', 'Fire', 'Fighting'),
+    ('Empoleon', '395', 'Sinnoh', 'Water', 'Steel'),
+    ('Staraptor', '398', 'Sinnoh', 'Normal', 'Flying'),
+    ('Luxray', '405', 'Sinnoh', 'Electric', NULL),
+    ('Rampardos', '409', 'Sinnoh', 'Rock', NULL),
+    ('Bastiodon', '411', 'Sinnoh', 'Rock', 'Steel'),
+    ('Victini', '494', 'Unova', 'Psychic', 'Fire'),
+    ('Serperior', '497', 'Unova', 'Grass', NULL),
+    ('Emboar', '500', 'Unova', 'Fire', 'Fighting'),
+    ('Samurott', '503', 'Unova', 'Water', NULL),
+    ('Stoutland', '508', 'Unova', 'Normal', NULL),
+    ('Simisage', '512', 'Unova', 'Grass', 'Fighting'),
+    ('Simisear', '514', 'Unova', 'Fire', 'Fighting'),
+    ('Simipour', '516', 'Unova', 'Water', 'Fighting'),
+    ('Unfezant', '521', 'Unova', 'Normal', 'Flying'),
+    ('Zebstrika', '523', 'Unova', 'Electric', NULL),
+    ('Gigalith', '526', 'Unova', 'Rock', NULL),
+    ('Excadrill', '530', 'Unova', 'Ground', 'Steel'),
+    ('Seismitoad', '537', 'Unova', 'Water', 'Ground'),
+    ('Leavanny', '542', 'Unova', 'Bug', 'Grass'),
+    ('Lilligant', '549', 'Unova', 'Grass', NULL),
+    ('Krookodile', '553', 'Unova', 'Ground', 'Dark'),
+    ('Chesnaught', '652', 'Kalos', 'Grass', 'Fighting'),
+    ('Delphox', '655', 'Kalos', 'Fire', 'Psychic'),
+    ('Greninja', '658', 'Kalos', 'Water', 'Dark'),
+    ('Talonflame', '663', 'Kalos', 'Fire', 'Flying'),
+    ('Pyroar', '668', 'Kalos', 'Fire', 'Normal'),
+    ('Florges', '671', 'Kalos', 'Fairy', NULL),
+    ('Pangoro', '675', 'Kalos', 'Fighting', 'Dark');
 
 INSERT INTO trainers (Name, Region)
 VALUES
-    ('ASH', 'Kanto');
+    ('Red', 'Kanto'),
+    ('Blue', 'Kanto'),
+    ('Ethan', 'Johto'),
+    ('Lyra', 'Johto'),
+    ('Brendan', 'Hoenn'),
+    ('May', 'Hoenn'),
+    ('Lucas', 'Sinnoh'),
+    ('Dawn', 'Sinnoh'),
+    ('Hilbert', 'Unova'),
+    ('Hilda', 'Unova'),
+    ('Calem', 'Kalos'),
+    ('Serana', 'Kalos');
+
 
 INSERT INTO trainer_has (Trainer_ID, Team_name, Pokemon_one, Pokemon_two, Pokemon_three, Pokemon_four, Pokemon_five, Pokemon_six)
 VALUES
-    (1, 'Kanto Icons', 'Pikachu', 'Charizard', 'Venasaur', 'Blastoise', NULL, NULL);
+    (1, 'The Beginning', 'Pikachu', 'Charizard', 'Butterfree', 'Pidgeot', NULL, NULL),
+    (2, 'The End', 'Blastoise', 'Beedrill', 'Fearow', 'Raticate', NULL, NULL),
+    (3, 'Main Team', 'Feraligatr', 'Noctowl', 'Ariados', NULL, NULL, NULL),
+    (4, 'Main Team', 'Meganium', 'Togetic', 'Raichu', NULL, NULL, NULL),
+    (5, 'Main Team', 'Sceptile', 'Slaking', 'Sharpedo', NULL, NULL, NULL),
+    (6, 'Main Team', 'Blaziken', 'Swampert', 'Gardevoir', 'Breloom', NULL, NULL),
+    (7, 'Main Team', 'Torterra', 'Infernape', 'Staraptor', 'Raichu', 'Luxray', 'Rampardos'),
+    (8, 'Main Team', 'Empoleon', 'Bastiodon', 'Mightyena', NULL, NULL, NULL),
+    (9, 'Main Team', 'Emboar', 'Samurott', 'Krookodile', NULL, NULL, NULL),
+    (10, 'Main Team', 'Serperior', 'Lilligant', 'Victini', 'Unfezant', NULL, NULL),
+    (11, 'Main Team', 'Greninja', 'Talonflame', 'Pangoro', NULL, NULL, NULL),
+    (12, 'Main Team', 'Delphox', 'Chesnaught', 'Florges', 'Seismitoad', 'Zebstrika', 'Blastoise');
+    
 `;
 
 async function main() {
