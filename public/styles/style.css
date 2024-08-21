@@ -1,0 +1,22 @@
+body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.trainer-card-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Three equal-width columns */
+    gap: 20px; /* Space between grid items */
+    width: 60vw;
+}
+
+.trainer-card{
+    height: 300px;
+    width: 300px;
+    border: solid 2px;
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+}
