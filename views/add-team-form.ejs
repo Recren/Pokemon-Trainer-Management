@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    </link>
+</head>
+
+<body>
+    <h1>Add Team</h1>
+
+    <form method="POST" action="/trainers/<%=trainer_id%>/addTeam">
+        <div style="display: flex; flex-direction: column; align-items: center; gap:30px">
+            <div style="display: flex; flex-direction: column;">
+                <label style="font-size: 30px;" for="team_name">Team Name:</label>
+                <input style="height: 30px; width: 400px;" type="text" name="team_name" id="team_name">
+            </div>
+            <div style="display: flex; flex-direction: column;">
+                <label style="font-size: 30px;" for="pokemon_one">Pokemon one</label>
+                <select style="height: 30px; width: 400px;" id="pokemon_one" name="pokemon_one">
+                    <%pokemon.forEach(pokemon=>{%>
+                        <option value="<%=pokemon.name%>">
+                            <%=pokemon.name%>
+                        </option>
+                        <%})%>
+                </select>
+            </div>
+            <div style="display: flex; flex-direction: column;">
+                <label style="font-size: 30px;" for="pokemon_two">Pokemon two</label>
+                <select style="height: 30px; width: 400px;" id="pokemon_two" name="pokemon_two">
+                    <%pokemon.forEach(pokemon=>{%>
+                        <option value="<%=pokemon.name%>">
+                            <%=pokemon.name%>
+                        </option>
+                        <%})%>
+                </select>
+            </div>
+            <div style="display: flex; flex-direction: column;">
+                <label style="font-size: 30px;" for="pokemon_three">Pokemon three</label>
+                <select style="height: 30px; width: 400px;" id="pokemon_three" name="pokemon_three">
+                    <%pokemon.forEach(pokemon=>{%>
+                        <option value="<%=pokemon.name%>">
+                            <%=pokemon.name%>
+                        </option>
+                        <%})%>
+                </select>
+            </div>
+            <div style="display: flex; flex-direction: column;">
+                <label style="font-size: 30px;" for="pokemon_four">Pokemon four</label>
+                <select style="height: 30px; width: 400px;" id="pokemon_four" name="pokemon_four">
+                    <%pokemon.forEach(pokemon=>{%>
+                        <option value="<%=pokemon.name%>">
+                            <%=pokemon.name%>
+                        </option>
+                        <%})%>
+                </select>
+            </div>
+            <div style="display: flex; flex-direction: column;">
+                <label style="font-size: 30px;" for="pokemon_five">Pokemon five</label>
+                <select style="height: 30px; width: 400px;" id="pokemon_five" name="pokemon_five">
+                    <%pokemon.forEach(pokemon=>{%>
+                        <option value="<%=pokemon.name%>">
+                            <%=pokemon.name%>
+                        </option>
+                        <%})%>
+                </select>
+            </div>
+            <div style="display: flex; flex-direction: column;">
+                <label style="font-size: 30px;" for="pokemon_six">Pokemon six</label>
+                <select style="height: 30px; width: 400px;" id="pokemon_six" name="pokemon_six">
+                    <%pokemon.forEach(pokemon=>{%>
+                        <option value="<%=pokemon.name%>">
+                            <%=pokemon.name%>
+                        </option>
+                        <%})%>
+                </select>
+            </div>
+            <button type="submit>">Submit Form</button>
+        </div>
+    </form>
+</body>
+
+</html>

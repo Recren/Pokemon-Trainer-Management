@@ -27,11 +27,24 @@ async function getTrainerTeams(trainer_id){
 async function postNewTrainer(name, region_name){
     await pool.query("INSERT INTO trainers (name, region) VALUES (($1), ($2))", [name, region_name])
 }
+
+async function getAllPokemon(){
+    const {rows} = await pool.query("SELECT * FROM pokemon;")
+    return rows
+}
+
+async function createNewTeam(trainer_id, team_name ,pokemon_one, pokemon_two, pokemon_three, pokemon_four, pokemon_five, pokemon_six){
+    await pool.query("INSERT INTO trainer_has (trainer_id, team_name ,pokemon_one, pokemon_two, pokemon_three, pokemon_four, pokemon_five, pokemon_six) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)", [trainer_id, team_name ,pokemon_one, pokemon_two, pokemon_three, pokemon_four, pokemon_five, pokemon_six])
+
+}
+
 module.exports = {
     getAllRegions,
     getTrainersFromRegion,
     getAllTrainers,
     getTrainerInfo,
     getTrainerTeams,
-    postNewTrainer
+    postNewTrainer,
+    getAllPokemon, 
+    createNewTeam
 };
